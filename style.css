@@ -1,0 +1,36 @@
+body {
+  
+}
+
+.container {
+  height: 1000px;
+}
+
+.box {
+  
+  background-color: #fff;
+  color: #34495e;
+  border-radius: 2px;
+  padding: 12px;
+  font-size: 100%;
+}
+
+.wrapper {
+
+  margin-left:220px; 
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(15, 45px);
+  grid-template-rows: repeat(15, 45px);
+   grid-auto-flow: row; 
+}
+
+.newGrid {
+  width: 600px;
+  margin-left:320px;
+}
+
+/* #grid {
+  
+} */
+

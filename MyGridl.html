@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container" style="background-color: #ecf0f1;">
+        <div class="row text-center pagination-centered">
+            <div class="col-lg-offset-1 col-lg-12">
+                <div class="col-lg-offset-1 col-lg-12" style="padding-bottom: 25px;">
+                    <h1 class="display-3">Game of Life</h1>
+                    <small class="text-muted"><small>Developed by Tom Crooks</small>
+                </div>
+                <button id="evolve" type="button" class="btn btn-success">Evolve</button>
+                <div class="wrapper" style="padding-top: 25px;">
+                        <div class="box" id="1" data-gridx="0" data-gridy="0">0</div>
+                        <div class="box" id="2" data-gridx="0" data-gridy="1">0</div>
+                        <div class="box" id="3" data-gridx="0" data-gridy="2">0</div>
+                        <div class="box" id="4" data-gridx="0" data-gridy="3">0</div>
+                        <div class="box" id="5" data-gridx="0" data-gridy="4">0</div>
+                        <div class="box" id="6" data-gridx="0" data-gridy="5">0</div>
+                        <div class="box" id="7" data-gridx="0" data-gridy="6">0</div>
+                        <div class="box" id="8" data-gridx="0" data-gridy="7">0</div>
+                        <div class="box" id="9" data-gridx="0" data-gridy="8">0</div>
+                        <div class="box" id="10" data-gridx="0" data-gridy="9">0</div>
+                        <div class="box" id="11" data-gridx="0" data-gridy="10">0</div>
+                        <div class="box" id="12" data-gridx="0" data-gridy="11">0</div>
+                        <div class="box" id="13" data-gridx="0" data-gridy="12">0</div>
+                        <div class="box" id="14" data-gridx="0" data-gridy="13">0</div>
+                        <div class="box" id="15" data-gridx="0" data-gridy="14">0</div>
+                        <div class="box" id="16" data-gridx="1" data-gridy="0">0</div>
+                        <div class="box" id="17" data-gridx="1" data-gridy="1">0</div>
+                        <div class="box" id="18" data-gridx="1" data-gridy="2">0</div>
+                        <div class="box" id="19" data-gridx="1" data-gridy="3">0</div>
+                        <div class="box" id="20" data-gridx="1" data-gridy="4">0</div>
+                        <div class="box" id="21" data-gridx="1" data-gridy="5">0</div>
+                        <div class="box" id="22" data-gridx="1" data-gridy="6">0</div>
+                        <div class="box" id="23" data-gridx="1" data-gridy="7">0</div>
+                        <div class="box" id="24" data-gridx="1" data-gridy="8">0</div>
+                        <div class="box" id="25" data-gridx="1" data-gridy="9">0</div>
+                        <div class="box" id="26" data-gridx="1" data-gridy="10">0</div>
+                        <div class="box" id="27" data-gridx="1" data-gridy="11">0</div>
+                        <div class="box" id="28" data-gridx="1" data-gridy="12">0</div>
+                        <div class="box" id="29" data-gridx="1" data-gridy="13">0</div>
+                        <div class="box" id="30" data-gridx="1" data-gridy="14">0</div>
+                        <div class="box" id="31" data-gridx="2" data-gridy="0">0</div>
+                        <div class="box" id="32" data-gridx="2" data-gridy="1">0</div>
+                        <div class="box" id="33" data-gridx="2" data-gridy="2">0</div>
+                        <div class="box" id="34" data-gridx="2" data-gridy="3">0</div>
+                        <div class="box" id="35" data-gridx="2" data-gridy="4">0</div>
+                        <div class="box" id="36" data-gridx="2" data-gridy="5">0</div>
+                        <div class="box" id="37" data-gridx="2" data-gridy="6">0</div>
+                        <div class="box" id="38" data-gridx="2" data-gridy="7">0</div>
+                        <div class="box" id="39" data-gridx="2" data-gridy="8">0</div>
+                        <div class="box" id="40" data-gridx="2" data-gridy="9">0</div>
+                        <div class="box" id="41" data-gridx="2" data-gridy="10">0</div>
+                        <div class="box" id="42" data-gridx="2" data-gridy="11">0</div>
+                        <div class="box" id="43" data-gridx="2" data-gridy="12">0</div>
+                        <div class="box" id="44" data-gridx="2" data-gridy="13">0</div>
+                        <div class="box" id="45" data-gridx="2" data-gridy="14">0</div>
+                        <div class="box" id="46" data-gridx="3" data-gridy="0">0</div>
+                        <div class="box" id="47" data-gridx="3" data-gridy="1">0</div>
+                        <div class="box" id="48" data-gridx="3" data-gridy="2">0</div>
+                        <div class="box" id="49" data-gridx="3" data-gridy="3">0</div>
+                        <div class="box" id="50" data-gridx="3" data-gridy="4">0</div>
+                        <div class="box" id="51" data-gridx="3" data-gridy="5">0</div>
+                        <div class="box" id="52" data-gridx="3" data-gridy="6">0</div>
+                        <div class="box" id="53" data-gridx="3" data-gridy="7">0</div>
+                        <div class="box" id="54" data-gridx="3" data-gridy="8">0</div>
+                        <div class="box" id="55" data-gridx="3" data-gridy="9">0</div>
+                        <div class="box" id="56" data-gridx="3" data-gridy="10">0</div>
+                        <div class="box" id="57" data-gridx="3" data-gridy="11">0</div>
+                        <div class="box" id="58" data-gridx="3" data-gridy="12">0</div>
+                        <div class="box" id="59" data-gridx="3" data-gridy="13">0</div>
+                        <div class="box" id="60" data-gridx="3" data-gridy="14">0</div>
+                        <div class="box" id="61" data-gridx="4" data-gridy="0">0</div>
+                        <div class="box" id="62" data-gridx="4" data-gridy="1">0</div>
+                        <div class="box" id="63" data-gridx="4" data-gridy="2">0</div>
+                        <div class="box" id="64" data-gridx="4" data-gridy="3">0</div>
+                        <div class="box" id="65" data-gridx="4" data-gridy="4">0</div>
+                        <div class="box" id="66" data-gridx="4" data-gridy="5">0</div>
+                        <div class="box" id="67" data-gridx="4" data-gridy="6">0</div>
+                        <div class="box" id="68" data-gridx="4" data-gridy="7">0</div>
+                        <div class="box" id="69" data-gridx="4" data-gridy="8">0</div>
+                        <div class="box" id="70" data-gridx="4" data-gridy="9">0</div>
+                        <div class="box" id="71" data-gridx="4" data-gridy="10">0</div>
+                        <div class="box" id="72" data-gridx="4" data-gridy="11">0</div>
+                        <div class="box" id="73" data-gridx="4" data-gridy="12">0</div>
+                        <div class="box" id="74" data-gridx="4" data-gridy="13">0</div>
+                        <div class="box" id="75" data-gridx="4" data-gridy="14">0</div>
+                        <div class="box" id="76" data-gridx="5" data-gridy="0">0</div>
+                        <div class="box" id="77" data-gridx="5" data-gridy="1">0</div>
+                        <div class="box" id="78" data-gridx="5" data-gridy="2">0</div>
+                        <div class="box" id="79" data-gridx="5" data-gridy="3">0</div>
+                        <div class="box" id="80" data-gridx="5" data-gridy="4">0</div>
+                        <div class="box" id="81" data-gridx="5" data-gridy="5">0</div>
+                        <div class="box" id="82" data-gridx="5" data-gridy="6">0</div>
+                        <div class="box" id="83" data-gridx="5" data-gridy="7">0</div>
+                        <div class="box" id="84" data-gridx="5" data-gridy="8">0</div>
+                        <div class="box" id="85" data-gridx="5" data-gridy="9">0</div>
+                        <div class="box" id="86" data-gridx="5" data-gridy="10">0</div>
+                        <div class="box" id="87" data-gridx="5" data-gridy="11">0</div>
+                        <div class="box" id="88" data-gridx="5" data-gridy="12">0</div>
+                        <div class="box" id="89" data-gridx="5" data-gridy="13">0</div>
+                        <div class="box" id="90" data-gridx="5" data-gridy="14">0</div>
+                        <div class="box" id="91" data-gridx="6" data-gridy="0">0</div>
+                        <div class="box" id="92" data-gridx="6" data-gridy="1">0</div>
+                        <div class="box" id="93" data-gridx="6" data-gridy="2">0</div>
+                        <div class="box" id="94" data-gridx="6" data-gridy="3">0</div>
+                        <div class="box" id="95" data-gridx="6" data-gridy="4">0</div>
+                        <div class="box" id="96" data-gridx="6" data-gridy="5">0</div>
+                        <div class="box" id="97" data-gridx="6" data-gridy="6">0</div>
+                        <div class="box" id="98" data-gridx="6" data-gridy="7">0</div>
+                        <div class="box" id="99" data-gridx="6" data-gridy="8">0</div>
+                        <div class="box" id="100" data-gridx="6" data-gridy="9">0</div>
+                        <div class="box" id="101" data-gridx="6" data-gridy="10">0</div>
+                        <div class="box" id="102" data-gridx="6" data-gridy="11">0</div>
+                        <div class="box" id="103" data-gridx="6" data-gridy="12">0</div>
+                        <div class="box" id="104" data-gridx="6" data-gridy="13">0</div>
+                        <div class="box" id="105" data-gridx="6" data-gridy="14">0</div>
+                        <div class="box" id="106" data-gridx="7" data-gridy="0">0</div> 
+                        <div class="box" id="107" data-gridx="7" data-gridy="1">0</div> 
+                        <div class="box" id="108" data-gridx="7" data-gridy="2">0</div> 
+                        <div class="box" id="109" data-gridx="7" data-gridy="3">0</div> 
+                        <div class="box" id="110" data-gridx="7" data-gridy="4">0</div> 
+                        <div class="box" id="111" data-gridx="7" data-gridy="5">0</div> 
+                        <div class="box" id="112" data-gridx="7" data-gridy="6">0</div> 
+                        <div class="box" id="113" data-gridx="7" data-gridy="7">0</div> 
+                        <div class="box" id="114" data-gridx="7" data-gridy="8">0</div> 
+                        <div class="box" id="115" data-gridx="7" data-gridy="9">0</div> 
+                        <div class="box" id="116" data-gridx="7" data-gridy="10">0</div>
+                        <div class="box" id="117" data-gridx="7" data-gridy="11">0</div> 
+                        <div class="box" id="118" data-gridx="7" data-gridy="12">0</div> 
+                        <div class="box" id="119" data-gridx="7" data-gridy="13">0</div>
+                        <div class="box" id="120" data-gridx="7" data-gridy="14">0</div> 
+                        <div class="box" id="121" data-gridx="8" data-gridy="0">0</div>
+                        <div class="box" id="122" data-gridx="8" data-gridy="1">0</div>
+                        <div class="box" id="123" data-gridx="8" data-gridy="2">0</div>
+                        <div class="box" id="124" data-gridx="8" data-gridy="3">0</div>
+                        <div class="box" id="125" data-gridx="8" data-gridy="4">0</div>
+                        <div class="box" id="126" data-gridx="8" data-gridy="5">0</div>
+                        <div class="box" id="127" data-gridx="8" data-gridy="6">0</div>
+                        <div class="box" id="128" data-gridx="8" data-gridy="7">0</div>
+                        <div class="box" id="129" data-gridx="8" data-gridy="8">0</div>
+                        <div class="box" id="130" data-gridx="8" data-gridy="9">0</div>
+                        <div class="box" id="131" data-gridx="8" data-gridy="10">0</div>
+                        <div class="box" id="132" data-gridx="8" data-gridy="11">0</div>
+                        <div class="box" id="133" data-gridx="8" data-gridy="12">0</div>
+                        <div class="box" id="134" data-gridx="8" data-gridy="13">0</div>
+                        <div class="box" id="135" data-gridx="8" data-gridy="14">0</div>
+                        <div class="box" id="136" data-gridx="9" data-gridy="0">0</div>
+                        <div class="box" id="137" data-gridx="9" data-gridy="1">0</div>
+                        <div class="box" id="138" data-gridx="9" data-gridy="2">0</div>
+                        <div class="box" id="139" data-gridx="9" data-gridy="3">0</div>
+                        <div class="box" id="140" data-gridx="9" data-gridy="4">0</div>
+                        <div class="box" id="141" data-gridx="9" data-gridy="5">0</div>
+                        <div class="box" id="142" data-gridx="9" data-gridy="6">0</div>
+                        <div class="box" id="143" data-gridx="9" data-gridy="7">0</div>
+                        <div class="box" id="144" data-gridx="9" data-gridy="8">0</div>
+                        <div class="box" id="145" data-gridx="9" data-gridy="9">0</div>
+                        <div class="box" id="146" data-gridx="9" data-gridy="10">0</div>
+                        <div class="box" id="147" data-gridx="9" data-gridy="11">0</div>
+                        <div class="box" id="148" data-gridx="9" data-gridy="12">0</div>
+                        <div class="box" id="149" data-gridx="9" data-gridy="13">0</div>
+                        <div class="box" id="150" data-gridx="9" data-gridy="14">0</div>
+                        <div class="box" id="151" data-gridx="10" data-gridy="0">0</div>
+                        <div class="box" id="152" data-gridx="10" data-gridy="1">0</div>
+                        <div class="box" id="153" data-gridx="10" data-gridy="2">0</div>
+                        <div class="box" id="154" data-gridx="10" data-gridy="3">0</div>
+                        <div class="box" id="155" data-gridx="10" data-gridy="4">0</div>
+                        <div class="box" id="156" data-gridx="10" data-gridy="5">0</div>
+                        <div class="box" id="157" data-gridx="10" data-gridy="6">0</div>
+                        <div class="box" id="158" data-gridx="10" data-gridy="7">0</div>
+                        <div class="box" id="159" data-gridx="10" data-gridy="8">0</div>
+                        <div class="box" id="160" data-gridx="10" data-gridy="9">0</div>
+                        <div class="box" id="161" data-gridx="10" data-gridy="10">0</div>
+                        <div class="box" id="162" data-gridx="10" data-gridy="11">0</div>
+                        <div class="box" id="163" data-gridx="10" data-gridy="12">0</div>
+                        <div class="box" id="164" data-gridx="10" data-gridy="13">0</div>
+                        <div class="box" id="165" data-gridx="10" data-gridy="14">0</div>
+                        <div class="box" id="166" data-gridx="11" data-gridy="0">0</div>
+                        <div class="box" id="167" data-gridx="11" data-gridy="1">0</div>
+                        <div class="box" id="168" data-gridx="11" data-gridy="2">0</div>
+                        <div class="box" id="169" data-gridx="11" data-gridy="3">0</div>
+                        <div class="box" id="170" data-gridx="11" data-gridy="4">0</div>
+                        <div class="box" id="171" data-gridx="11" data-gridy="5">0</div>
+                        <div class="box" id="172" data-gridx="11" data-gridy="6">0</div>
+                        <div class="box" id="173" data-gridx="11" data-gridy="7">0</div>
+                        <div class="box" id="174" data-gridx="11" data-gridy="8">0</div>
+                        <div class="box" id="175" data-gridx="11" data-gridy="9">0</div>
+                        <div class="box" id="176" data-gridx="11" data-gridy="10">0</div>
+                        <div class="box" id="177" data-gridx="11" data-gridy="11">0</div>
+                        <div class="box" id="178" data-gridx="11" data-gridy="12">0</div>
+                        <div class="box" id="179" data-gridx="11" data-gridy="13">0</div>
+                        <div class="box" id="180" data-gridx="11" data-gridy="14">0</div>
+                        <div class="box" id="181" data-gridx="12" data-gridy="0">0</div>
+                        <div class="box" id="182" data-gridx="12" data-gridy="1">0</div>
+                        <div class="box" id="183" data-gridx="12" data-gridy="2">0</div>
+                        <div class="box" id="184" data-gridx="12" data-gridy="3">0</div>
+                        <div class="box" id="185" data-gridx="12" data-gridy="4">0</div>
+                        <div class="box" id="186" data-gridx="12" data-gridy="5">0</div>
+                        <div class="box" id="187" data-gridx="12" data-gridy="6">0</div>
+                        <div class="box" id="188" data-gridx="12" data-gridy="7">0</div>
+                        <div class="box" id="189" data-gridx="12" data-gridy="8">0</div>
+                        <div class="box" id="190" data-gridx="12" data-gridy="9">0</div>
+                        <div class="box" id="191" data-gridx="12" data-gridy="10">0</div>
+                        <div class="box" id="192" data-gridx="12" data-gridy="11">0</div>
+                        <div class="box" id="193" data-gridx="12" data-gridy="12">0</div>
+                        <div class="box" id="194" data-gridx="12" data-gridy="13">0</div>
+                        <div class="box" id="195" data-gridx="12" data-gridy="14">0</div>
+                        <div class="box" id="196" data-gridx="13" data-gridy="0">0</div>
+                        <div class="box" id="197" data-gridx="13" data-gridy="1">0</div>
+                        <div class="box" id="198" data-gridx="13" data-gridy="2">0</div>
+                        <div class="box" id="199" data-gridx="13" data-gridy="3">0</div>
+                        <div class="box" id="200" data-gridx="13" data-gridy="4">0</div>
+                        <div class="box" id="201" data-gridx="13" data-gridy="5">0</div>
+                        <div class="box" id="202" data-gridx="13" data-gridy="6">0</div>
+                        <div class="box" id="203" data-gridx="13" data-gridy="7">0</div>
+                        <div class="box" id="204" data-gridx="13" data-gridy="8">0</div>
+                        <div class="box" id="205" data-gridx="13" data-gridy="9">0</div>
+                        <div class="box" id="206" data-gridx="13" data-gridy="10">0</div>
+                        <div class="box" id="207" data-gridx="13" data-gridy="11">0</div>
+                        <div class="box" id="208" data-gridx="13" data-gridy="12">0</div>
+                        <div class="box" id="209" data-gridx="13" data-gridy="13">0</div>
+                        <div class="box" id="210" data-gridx="13" data-gridy="14">0</div>
+                        <div class="box" id="211" data-gridx="14" data-gridy="0">0</div>
+                        <div class="box" id="212" data-gridx="14" data-gridy="1">0</div>
+                        <div class="box" id="213" data-gridx="14" data-gridy="2">0</div>
+                        <div class="box" id="214" data-gridx="14" data-gridy="3">0</div>
+                        <div class="box" id="215" data-gridx="14" data-gridy="4">0</div>
+                        <div class="box" id="216" data-gridx="14" data-gridy="5">0</div>
+                        <div class="box" id="217" data-gridx="14" data-gridy="6">0</div>
+                        <div class="box" id="218" data-gridx="14" data-gridy="7">0</div>
+                        <div class="box" id="219" data-gridx="14" data-gridy="8">0</div>
+                        <div class="box" id="220" data-gridx="14" data-gridy="9">0</div>
+                        <div class="box" id="221" data-gridx="14" data-gridy="10">0</div>
+                        <div class="box" id="222" data-gridx="14" data-gridy="11">0</div>
+                        <div class="box" id="223" data-gridx="14" data-gridy="12">0</div>
+                        <div class="box" id="224" data-gridx="14" data-gridy="13">0</div>
+                        <div class="box" id="225" data-gridx="14" data-gridy="14">0</div>
+                       
+                </div>
+                <br>    
+                <button id="stop" type="button" class="btn btn-danger">Stop</button>
+            </div>
+        </div>
+    </div>
+<script src="./gol_latest.js"></script>
+
+</body>
+
+</html>
